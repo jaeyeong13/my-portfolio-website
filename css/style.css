@@ -21,6 +21,7 @@
 
 body {
   font-family: "IBM Plex Sans KR", sans-serif;
+  margin: 0; /* header가 본문을 가득 채움 */
 }
 
 h1,
@@ -49,4 +50,49 @@ button {
 
 button:focus {
   outline: 1px solid var(--color-accent);
+}
+
+/* Header */
+.header {
+  background-color: var(--color-black);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1rem; /* 양쪽 사각 모서리 기둥에 padding을 넣어줌 */
+  display: flex; /* 요소들(div 태그와 nav 태그)을 수평으로 나란히 배치함 */
+  justify-content: space-between; /* 각 아이템 사이의 간격을 자동으로 줌 */
+  align-items: center; /* 아이템들을 중간에 배치 */
+}
+
+.header__logo {
+  display: flex; /* 이미지와 텍스트를 나란히 수평으로 배치함 */
+  align-items: center;
+  gap: 8px; /* flexbox 안에 들어 있는 자식들 간의 갭을 8px로 줌 */
+}
+
+.header__logo__img {
+  width: 36px;
+  height: 36px;
+}
+
+.header__logo__title {
+  font-size: 1.8rem; /* 현재 브라우저에 기본적으로 설정되어 있는 폰트 사이즈의 1.8배를 해 줌 */
+}
+
+.header__menu {
+  display: flex; /* 수평 정렬 */
+  gap: 4px;
+}
+
+.header__menu__item {
+  padding: 8px 16px; /* 위/아래로는 8px, 양 옆으로는 16px */
+}
+
+.header__menu__item:hover {
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.header__menu__item.active {
+  border: 1px solid var(--color-accent);
+  border-radius: 4px;
 }
