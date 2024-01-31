@@ -78,7 +78,7 @@ button:focus {
 
 /* Header */
 .header {
-  background-color: var(--color-black);
+  background-color: transparent;
   position: fixed;
   top: 0;
   width: 100%;
@@ -87,6 +87,12 @@ button:focus {
   justify-content: space-between; /* 각 아이템 사이의 간격을 자동으로 줌 */
   align-items: center; /* 아이템들을 중간에 배치 */
   z-index: 1;
+  transition: all 200ms ease;
+}
+
+.header--dark {
+  background-color: var(--color-primary);
+  box-shadow: 0 20px 50px rgba(240, 46, 170, 0.7);
 }
 
 .header__logo {
