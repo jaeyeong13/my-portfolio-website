@@ -1,3 +1,4 @@
+"use strict";
 // Header에 페이지 아래로 스크롤 시 다크 스타일링을 적용한다.
 const header = document.querySelector(".header"); // 클래스 header인 것을 가진 요소들을 찾아 달라고 querySelector에 요청함
 // document: 문서 전체에 대한 정보를 갖고 있는 객체
