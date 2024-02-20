@@ -30,5 +30,5 @@ function filterProjects(filter) {
   projectsContainer.classList.add("anim-out");
   setTimeout(() => {
     projectsContainer.classList.remove("anim-out");
-  }, 200);
+  }, 250);
 }
