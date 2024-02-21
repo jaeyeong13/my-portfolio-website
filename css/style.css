@@ -242,12 +242,13 @@ button:focus {
   transform: rotate(-15deg) scale(1.2);
 }
 
-.jobs {
-  text-align: start; /* 왼쪽 정렬 */
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 1rem;
-}
+/*.jobs {*/
+/*  text-align: start;*/
+/*  align-items: center;*/
+/*  gap: 8px;*/
+/*  margin-bottom: 1rem;*/
+/*  display: inline-block;*/
+/*}*/
 
 .jobimg {
   width: 40px;
@@ -484,7 +485,7 @@ button:focus {
 }
 .fa-arrow-up::before {
   position: relative;
-  top: 10px;
+  top: 9px;
 }
 
 /* Footer */
@@ -508,6 +509,27 @@ button:focus {
 .contact__link:hover {
   color: var(--color-accent);
 }
+
+
+.job, .club {
+  display: inline-block;
+  width: auto;
+}
+
+.job {
+  margin-left: 200px;
+}
+
+.club {
+  margin-right: 150px;
+}
+
+.jobs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 
 @media screen and (max-width: 768px) {
   .section {
@@ -567,9 +589,6 @@ button:focus {
     max-width: 25rem;
   }
 
-  .job {
-    justify-content: center;
-  }
 
   .skills {
     grid-template-columns: 1fr;
@@ -601,5 +620,22 @@ button:focus {
     height: 3rem;
     bottom: 1.5rem;
     right: 1.5rem;
+  }
+
+  .jobs {
+    display: flex;
+    flex-direction: column; /* 아이템을 세로로 쌓음 */
+    align-items: center; /* 가로축 기준으로 중앙 정렬 */
+    justify-content: center; /* 세로축 기준으로 중앙 정렬 */
+  }
+
+  .job, .club {
+    margin-right: 0; /* 오른쪽 마진을 제거 */
+    width: auto; /* 자동 너비로 설정하여 가로 폭에 맞춤 */
+    text-align: center; /* 텍스트를 중앙 정렬 */
+  }
+
+  .job {
+    margin-left: 0;
   }
 }
